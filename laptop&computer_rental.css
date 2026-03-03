@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header {
+    background: #ffffff;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.brand {
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    color: #1a1a2e;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1a1a2e;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+.hero {
+    background: linear-gradient(to right, #1a1a2e, #16213e);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+.section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.service-grid,
+.product-grid,
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.service-box {
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.service-box:hover {
+    background: #007bff;
+    color: white;
+}
+
+.light {
+    background: #f4f6f9;
+}
+
+.solutions-grid div {
+    background: #1a1a2e;
+    color: white;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.product-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.why {
+    background: #16213e;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.why ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.why li {
+    padding: 8px 0;
+}
+
+.contact {
+    background: #1a1a2e;
+    color: white;
+}
+
+footer {
+    background: #0f3460;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}

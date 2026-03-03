@@ -1,0 +1,422 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+
+
+.navbar {
+    background: white;
+    height: 80px;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 80px; /* Logo ki size yahan se adjust karein */
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #b21f1f; /* Arya Info System theme red */
+}
+
+/* Special Button Style for Contact Us */
+.contact-btn {
+    background:  #1a2a6c; /* Deep Blue */
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background: #b21f1f !important;
+    transform: translateY(-2px);
+}
+
+/* Mobile Menu Toggle */
+#check {
+    display: none;
+}
+
+.checkbtn {
+    font-size: 25px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #fdfdfd;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        flex-direction: column;
+        padding-top: 50px;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links a {
+        font-size: 20px;
+    }
+
+    #check:checked ~ .nav-links {
+        left: 0;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    background: #1a2a6c;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 100px; /* Navbar ke liye space */
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    margin: 40px 0;
+    color: #1a2a6c;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+/* Main Grid Layout */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Card Design */
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background: #fff;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.card-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.printer-list {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* Buttons */
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn {
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+}
+
+.btn-buy {
+    background-color: #1a2a6c;
+    color: white;
+}
+
+.btn-refill {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 2s steps(30, end), blink-caret .75s step-end infinite;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #fff; }
+}
+.zoom-image {
+    width: 400px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.zoom-image:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* Footer */
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2); /* Light transparent background */
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+
+
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+/* Hover Effects */
+.social-links a:hover {
+    color: #ffffff;
+    background-color: #25d366; /* WhatsApp Green on Hover */
+    transform: scale(1.1);
+}
+
+/* Specific Colors for each icon on hover */
+.social-links a:nth-child(1):hover { background-color: #1877F2; } /* FB */
+.social-links a:nth-child(2):hover { background-color: #E4405F; } /* Insta */
+.social-links a:nth-child(3):hover { background-color: #25d366; }
+.social-links a:nth-child(4):hover { background-color: #1877F2; } /* WA */
+
+
+.footer {
+    background-color: black;
+    padding: 70px 0 20px;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+/* Red underline effect */
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    width: 50px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    color: #bbbbbb;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col p {
+    color: #bbbbbb;
+    line-height: 1.5;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 50px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 30px;
+    font-size: 14px;
+    color: #888;
+}
+
+/* Responsive adjustments */
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px; /* Niche se gap */
+    right: 20px;  /* Right side se gap */
+    background-color: #25d366; /* WhatsApp Green Color */
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000; /* Taaki ye har cheez ke upar dikhe */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E; /* Hover karne par dark green */
+    transform: scale(1.1); /* Thoda zoom hoga */
+}
+
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+}

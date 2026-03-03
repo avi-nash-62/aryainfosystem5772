@@ -1,0 +1,449 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.navbar {
+    background: white;
+    height: 80px;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+    display: block;
+    transition: 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #b21f1f;
+}
+
+/* Special Button Style for Contact Us */
+.contact-btn {
+    background:  #1a2a6c;
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background: #b21f1f !important;
+    transform: translateY(-2px);
+}
+
+/* Mobile Menu Toggle */
+#check {
+    display: none;
+}
+
+.checkbtn {
+    font-size: 25px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
+}
+
+header {
+    background-color: #1a2a6c;
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+    margin-top: 80px; /* Adjusted to match navbar height exactly */
+}
+
+header h1 {
+    font-size: 32px;
+}
+
+header p {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.intro {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.intro h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* CSS Grid for Printers - Highly Responsive */
+.printer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted from 300px to 280px for smaller mobile screens */
+    gap: 25px;
+    padding: 30px 40px;
+}
+
+.printer-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.printer-card:hover {
+    transform: translateY(-5px);
+}
+
+.printer-image {
+    background-color: #e9ecef;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.printer-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.printer-card h3 {
+    margin-bottom: 10px;
+    color: #1a2a6c;
+}
+
+.printer-card ul {
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.printer-card ul li {
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+button {
+    background-color: #1a2a6c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #0b5ed7;
+}
+
+.zoom-image {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.zoom-image:hover {
+    transform: scale(1.1);
+}
+
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 1.5s steps(30, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #fff; }
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.social-links a:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.social-links a:nth-child(1):hover { background-color: #1877F2; } 
+.social-links a:nth-child(2):hover { background-color: #E4405F; } 
+.social-links a:nth-child(3):hover { background-color: #25d366; }
+.social-links a:nth-child(4):hover { background-color: #0077b5; } /* Fixed LinkedIn color */
+
+.footer {
+    background-color: black;
+    padding: 70px 0 20px;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    width: 50px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    color: #bbbbbb;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col p {
+    color: #bbbbbb;
+    line-height: 1.5;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 50px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 30px;
+    font-size: 14px;
+    color: #888;
+}
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);
+}
+
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+}
+
+/* =========================================
+   RESPONSIVE MEDIA QUERIES (The Magic Part)
+   ========================================= */
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+    
+    .logo img {
+        height: 60px; /* Scaled down logo for mobile navbar */
+    }
+
+    .nav-links {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #fdfdfd;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        flex-direction: column;
+        padding-top: 50px;
+        z-index: 999;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links a {
+        font-size: 20px;
+    }
+
+    #check:checked ~ .nav-links {
+        left: 0;
+    }
+}
+
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    
+    .printer-container {
+        padding: 20px 15px; /* Reduced side padding for tablets/mobiles */
+        gap: 15px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+    
+    .nav-container {
+        padding: 0 15px;
+    }
+    
+    header h1 {
+        font-size: 24px; /* Reduced font size for typewriter effect on mobile */
+    }
+    
+    header p {
+        font-size: 14px;
+    }
+    
+    .intro {
+        padding: 30px 15px;
+    }
+    
+    .intro h2 {
+        font-size: 24px;
+    }
+    
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .whatsapp-icon {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* Fix for extremely small devices (like iPhone SE) so the typewriter text doesn't overflow */
+@media(max-width: 380px) {
+    header h1 {
+        font-size: 20px;
+    }
+    .printer-container {
+        grid-template-columns: 1fr; /* Forces exactly one card per row on tiny screens */
+    }
+}
